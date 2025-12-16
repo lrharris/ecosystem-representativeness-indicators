@@ -48,11 +48,12 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-#Data
+# Data
 data/
 
-#Outputs
+# Outputs
 outputs/
 
-#Unsed scripts
+# Unsed scripts
 code/not used/
+
