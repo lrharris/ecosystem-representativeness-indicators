@@ -8,13 +8,13 @@ Harris, L.R., et al. XXXX. Indicators for tracking progress in effective, repres
 
 #### CODE STRUCTURE AND NOTES
 
--   The code was written in short 'chapters' instead of a single long script. The scripts named .0\_...master... then source each of the chapters for a section (A, B, C, D). You can either run the master scripts, or each chapter. Note, though, that there are dependencies on objects and values calculated in previous scripts, so it's best to run them sequentially.
+-   The code was written in short 'chapters'. The scripts named .0\_...master... then source each of the chapters for a section (A, B, C, D, E) that - in turn - output a figure (or theme of figures) for the above paper. You can either run the master scripts, or each chapter in order. Note, though, that there are often dependencies on objects and values calculated in previous scripts, so it's best to run everything sequentially.
 
 -   The indicators originally used the term 'representivity', which was changed to 'representativeness' in the peer-review process (where both words mean the same thing but the latter term is more widely used). Although the figure legends and labels were updated to reflect this change, the original terminology is still in the code.
 
--   There are more computationally faster approaches for some analyses using raster-based methods, but given the size of some of the ecosystems types, we chose a vector-based approach, which is a bit longer to run but more spatially accurate.
+-   There are faster approaches for some analyses using raster-based methods, but given the small size of some of the ecosystems types, we chose a vector-based approach, which is a bit longer to run but more spatially accurate.
 
-#### SECTION A: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness, Representativeness Index, and Condition-Adjusted Representativeness Index at a national scale
+#### SECTION A: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness, Representativeness Index, and Condition-Adjusted Representativeness Index by country
 
 *This section includes the scripts to calculate the indicators described in Sections 2.2.1 and 2.2.2 of the paper , with outputs presented in Section 3.1.*
 
@@ -30,11 +30,11 @@ Harris, L.R., et al. XXXX. Indicators for tracking progress in effective, repres
 
 -   **A5:** Outputs **Figure 3b,c** for the paper
 
-#### SECTION B: Ecosystem Protection Level and Ecosystem Protection Level Index by ecosystem groups
+#### SECTION B: Ecosystem Protection Level and Ecosystem Protection Level Index by ecosystem groups (realm, and IUCN Global Ecosystem Typology levels)
 
 *This section includes the scripts to calculate the indicators in Sections 2.3.2 and 2.3.3 of the paper, with outputs presented in Section 3.2 and the Supplementary.*
 
--   **B0:** Master script; outputs **Figure 4b,c,d** for the paper
+-   **B0:** Master script; outputs **Figure 4b,c,d** and **Figure S3** for the paper
 
 -   **B1:** Sets up inputs and plots
 
@@ -44,25 +44,25 @@ Harris, L.R., et al. XXXX. Indicators for tracking progress in effective, repres
 
 -   **B4**: Calculates Ecosystem Protection level using IUCN GET groups; outputs Supplementary **Figure S3** for the paper
 
-#### SECTION C: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness by Ecosystem Groups
+#### SECTION C: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness by ecosystem groups (realm, and IUCN Global Ecosystem Typology levels)
 
 *This section includes the scripts to calculate the indicators in Section 2.3.4 of the paper, with outputs presented in Section 3.2 and in the Supplementary.*
 
--   **C0:** Master script
+-   **C0:** Master script; outputs **Figure 5** and **Figure S4** for the paper
 
 -   **C1:** Sets up inputs and plots
 
 -   **C2:** Calculates Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness by realm; outputs **Figure 5** for the paper [script takes a long time to run]
 
--   **C3:** Calculates Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness by IUCN GET Level 3; outputs Supplementary **Figure S4** for the paper
+-   **C3:** Calculates Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness by IUCN GET Level 3; outputs Supplementary **Figure S4** for the paper [script takes a while to run]
 
-#### SECTION D: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness and Ecosystem Protection Level at the level of ecosystem types
+#### SECTION D: Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness and Ecosystem Protection Level by ecosystem types
 
 *This section includes the scripts to calculate the indicators in Section 2.4.1 of the paper, with outputs presented in Section 3.3.*
 
--   **D1:** Outputs **Figure 6** for the paper
+-   **D1:** Calculates Protected Area Coverage, Representativeness, Condition-Adjusted Representativeness and Ecosystem Protection Level per ecosystem type; outputs **Figure 6** for the paper
 
-#### SECTION E: IUCN GET Summaries
+#### SECTION E: Condition-Adjusted Representativeness and Ecosystem Protection Level Index at the IUCN GET levels, recommended for inclusion in the monitoring framework for the Kunming-Montreal Global Biodiversity Framework (for Target 3)  
 
 *This section includes the scripts to calculate the indicators in Section 2.5 of the paper, with outputs presented in Section 3.4 and the Discussion.*
 
