@@ -4,7 +4,7 @@
 
 #### PUBLICATION
 
-Harris, L.R., et al. XXXX. Indicators for tracking progress in effective, representative ecosystem protection. Conservation Biology, in review. doi: XXXX
+Harris, L.R., et al. XXXX. Indicators for tracking progress in effective, representative ecosystem protection. Conservation Biology, accepted manuscript. doi: XXXX
 
 #### CODE STRUCTURE AND NOTES
 
