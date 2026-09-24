@@ -57,11 +57,11 @@ dc1$realm <- ordered(case_match(dc1$realm, "terrestrial" ~ "Terrestrial",
 
 dc1$protection_type <- ordered(case_match(
   dc1$protection_type, 
-  "additional_prop" ~ "Additional Protected Area Coverage",
+  "additional_prop" ~ "Additional protected area coverage",
   "repres_prop" ~ "Representativeness",
-  "cond_repres_prop" ~ "Condition-Adjusted Representativeness"),
-  levels=c("Additional Protected Area Coverage","Representativeness",
-           "Condition-Adjusted Representativeness"))
+  "cond_repres_prop" ~ "Condition-adjusted representativeness"),
+  levels=c("Additional protected area coverage","Representativeness",
+           "Condition-adjusted representativeness"))
 
 
 ## Prepare the plot ------------------------------------------------------------
@@ -80,7 +80,7 @@ EPL.C<-ggplot(dc1, aes(x = realm, y = prop, pattern_angle=protection_type))+
   scale_y_continuous(labels = scales::percent_format(scale = 1))+
   theme(legend.title = element_blank())+
   theme(legend.key.size = unit(0.6, 'cm'))+
-  theme(legend.position = c(0.995, 1.01), 
+  theme(legend.position = c(0.99, 1.01), 
         legend.justification = c("right", "top"))+
   guides(pattern = guide_legend(override.aes = list(fill = "white"), order = 2),
          fill = guide_legend(override.aes = list(pattern = "none", order = 1)))

@@ -85,11 +85,11 @@ dc_get1 <- pivot_longer(dC_get, cols=c("cond_repres_prop_g", "repres_prop_g",
 
 dc_get1$protection_type <- ordered(case_match(
   dc_get1$protection_type, 
-  "additional_prop_g" ~ "Additional Protected Area Coverage", 
+  "additional_prop_g" ~ "Additional protected area coverage", 
   "repres_prop_g" ~ "Representativeness",
-  "cond_repres_prop_g" ~ "Condition-Adjusted Representativeness"),
-  levels=c("Additional Protected Area Coverage","Representativeness",
-           "Condition-Adjusted Representativeness"))
+  "cond_repres_prop_g" ~ "Condition-adjusted representativeness"),
+  levels=c("Additional protected area coverage","Representativeness",
+           "Condition-adjusted representativeness"))
 
 
 ## Prepare the plot ------------------------------------------------------------
@@ -122,7 +122,7 @@ EPL.CG<-ggplot(dc_get1, aes(x = efg_codename, y = prop, pattern_angle=protection
 # PLOT RESULTS -----------------------------------------------------------------
 EPL.CG
 
-pdf(here("outputs", "FigureS4.pdf"),width=10,height=9)
-EPL.CG
-dev.off()
+# pdf(here("outputs", "FigureS4.pdf"),width=10,height=9)
+# EPL.CG
+# dev.off()
 #Save as pdf 10 x 9

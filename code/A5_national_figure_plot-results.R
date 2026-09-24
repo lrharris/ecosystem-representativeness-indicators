@@ -38,9 +38,9 @@ r_indices <- repres_data %>%
 # Plot -------------------------------------------------------------------------
 r_indicators_graph <- ggplot(r_indicators)+ 
   geom_line(aes(x = pa_year, y = proportion, colour = indicator), linewidth=1.1) +
-  scale_colour_manual(labels = c("Protected Area Coverage", 
+  scale_colour_manual(labels = c("Protected area coverage", 
                                  "Representativeness", 
-                                 "Condition-Adjusted Representativeness"), 
+                                 "Condition-adjusted representativeness"), 
    #                   values = c("#2c7fb8", "#7fcdbb", "#edf8b1")) +
    values = c("#a1dab4", "#41b6c4", "#225ea8")) +
   ylab("Proportion of SA Territory (%)") +
@@ -50,8 +50,8 @@ r_indicators_graph <- ggplot(r_indicators)+
 
 r_indices_graph <- ggplot(r_indices)+ 
   geom_line(aes(x = pa_year, y = value, colour = index), linewidth=1.1) +
-  scale_colour_manual(labels = c("Representativeness Index", 
-                                 "Condition-Adjusted Representativeness Index"), 
+  scale_colour_manual(labels = c("Representativeness index", 
+                                 "Condition-adjusted representativeness index"), 
                       values = c("#41b6c4", "#225ea8"))+
   ylab("Index")+
   ylim(0.5,1)+

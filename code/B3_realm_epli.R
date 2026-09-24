@@ -18,16 +18,16 @@ epli_rawdata<-pa_et_yr %>%
 epli_dat<-epli_rawdata %>% 
   rename(grp = realm, year = pa_year) 
 epli_dat$grp <- case_match(epli_dat$grp, "terrestrial" ~ "Terrestrial", 
-                           "river" ~ "River",
-                           "wetland" ~ "Wetland",
-                           "estuary" ~ "Estuary", 
+                           "river" ~ "Rivers",
+                           "wetland" ~ "Wetlands",
+                           "estuary" ~ "Estuaries", 
                            "marine" ~ "Marine: benthic", 
                            "pelagic" ~ "Marine: pelagic",
                            "pei"~ "PEI")
 epli_dat<-epli_dat %>%
   group_by(grp, year) %>%
   summarize(epli_sumscore = sum(epli_et), epli = epli_sumscore/sum(epli_max)) %>%   mutate(year = as.numeric(as.character(year))) %>% 
-  mutate(grp = factor(grp, levels = c("Terrestrial","River", "Wetland","Estuary", 
+  mutate(grp = factor(grp, levels = c("Terrestrial","Rivers", "Wetlands","Estuaries", 
                                       "Marine: benthic", "Marine: pelagic", 
                                       "PEI")))
 

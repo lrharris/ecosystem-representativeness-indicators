@@ -31,9 +31,9 @@ ggarrange(ggarrange(epl_t, epl_e, ncol = 2, labels = c("b","c"), legend = "none"
 
 #export pdf: 9.21 x 6.5
 
-## Supplementary Figure S3
+## Appendix S5
 epl_tg
 
-
+#export pdf: 10 x 9
 
 ### END SCRIPT ###

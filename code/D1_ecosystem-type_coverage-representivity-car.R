@@ -66,11 +66,11 @@ data_d1 <- pivot_longer(data_d, cols=c("cond_repres_prop",
 
 data_d1$protection_type <- ordered(case_match(
   data_d1$protection_type, 
-  "additional_prop" ~ "Additional Protected Area Coverage", 
+  "additional_prop" ~ "Additional protected area coverage", 
   "repres_prop" ~ "Representativeness",
-  "cond_repres_prop" ~ "Condition-Adjusted Representativeness"),
-  levels=c("Additional Protected Area Coverage","Representativeness",
-           "Condition-Adjusted Representativeness"))
+  "cond_repres_prop" ~ "Condition-adjusted representativeness"),
+  levels=c("Additional protected area coverage","Representativeness",
+           "Condition-adjusted representativeness"))
 
 epl_dat_e <- data_d1 %>% 
   filter(realm == "estuary") %>% 
@@ -119,8 +119,8 @@ EPL_estuaries<-ggplot(epl_dat_e, aes(x = eco_type, y = prop, pattern_angle=prote
 # PLOT RESULTS -----------------------------------------------------------------
 ## Figure 6
 
-pdf(here("outputs", "Figure6.pdf"),width=10,height=7)
+# pdf(here("outputs", "Figure6.pdf"),width=10,height=7)
 EPL_estuaries
-dev.off()
+# dev.off()
 
 #9.21 x 5

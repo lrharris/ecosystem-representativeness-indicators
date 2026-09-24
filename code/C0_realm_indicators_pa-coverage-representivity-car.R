@@ -17,9 +17,12 @@ source(here("code/C3_get_efg_pa_coverage_representivity_car.R"))
 ## Figure 5
 EPL.C
 
-## Figure S4
+#export pdf: 10 x 3.7
+
+
+## Appendix S6
 EPL.CG
 
-#export pdf: 10 x 3.7
+#Save as pdf 10 x 9
 
 ### END SCRIPT ###
